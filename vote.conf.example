@@ -1,0 +1,9 @@
+################
+### TO EDIT ####
+################
+owner="<YOUR_MN_ADDRESS>"
+defiPath="<PATH_TO_DEFI-CLI>"
+################
+### Optional ###
+password=""
+################

@@ -1,32 +1,28 @@
 #!/usr/bin/bash
 
-################
-### TO EDIT ####
-################
-owner=""
-defiPath=""
-################
-### Optional ###
-pass=""
-################
+if [ -e vote.conf ]
+then
+  source vote.conf
+fi
 
 user=`whoami`
 conf="/home/$user/.defi/defi.conf"
+cfps="cfps/2202.txt"
 
 if [ -z $owner ]
 then
   owner=`/usr/bin/zenity --entry --title "Owner" --text "Please input your owner address"`
 fi
 
-if [ -z $pass ]
+if [ -z $password ]
 then
-  pass=`/usr/bin/zenity --password --title "Password" --text "Please input your password"`
+  password=`/usr/bin/zenity --password --title "Password" --text "Please input your password"`
 fi
 
-if [ ! -z $pass ]
+if [ ! -z $password ]
 then
-  $defiPath/defi-cli -conf="$conf" walletpassphrase "$pass" 600
-  pass=""
+  $defiPath/defi-cli -conf="$conf" walletpassphrase "$password" 600
+  password=""
 fi
 
 while read -r CFP
@@ -46,6 +42,6 @@ do
   fi
   sign=`"$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote"`
   echo "defi-cli signmessage $owner $cfpId-$vote $sign" | xclip -selection c
-done < cfps.txt
+done < "$cfps"
 
 "$defiPath/defi-cli" -conf="$conf" walletlock
