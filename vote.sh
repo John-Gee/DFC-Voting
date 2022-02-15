@@ -5,8 +5,6 @@ then
   source vote.conf
 fi
 
-user=`whoami`
-conf="/home/$user/.defi/defi.conf"
 cfps="cfps/2202.txt"
 
 if [ -z $owner ]
@@ -14,14 +12,16 @@ then
   owner=`/usr/bin/zenity --entry --title "Owner" --text "Please input your owner address"`
 fi
 
-if [ -z $password ]
-then
-  password=`/usr/bin/zenity --password --title "Password" --text "Please input your password"`
-fi
+password=`/usr/bin/zenity --password --title "Password"`
 
 if [ ! -z $password ]
 then
-  $defiPath/defi-cli -conf="$conf" walletpassphrase "$password" 600
+  $defiPath/defi-cli -conf="$conf" walletpassphrase "$password" $timeout
+  if [ 0 != $? ]
+  then
+    /usr/bin/zenity --error --no-wrap --text "Wallet unlocking failed!"
+    exit 1
+  fi
   password=""
 fi
 

@@ -1,9 +1,19 @@
+#!/usr/bin/bash
+
 ################
 ### TO EDIT ####
 ################
-owner="<YOUR_MN_ADDRESS>"
-defiPath="<PATH_TO_DEFI-CLI>"
+### Your masternode owner address:
+owner=""
+### The path to the defi-cli binary:
+defiPath=""
 ################
 ### Optional ###
-password=""
+################
+### The timeout before the wallet relocks
+### It will always lock after the script is done
+timeout=600
+### The path to defi.conf
+user=`whoami`
+conf="/home/$user/.defi/defi.conf"
 ################
