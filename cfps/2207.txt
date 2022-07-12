@@ -1,0 +1,22 @@
+21
+DFIP-2207-A|New vault liquidation rules|https://github.com/DeFiCh/dfips/issues/161
+DFIP-2207-B|Introduce USDC-DUSD and USDT-DUSD pool for a stable DUSD peg (including shortterm relief for DUSD discount)|https://github.com/DeFiCh/dfips/issues/184
+DFIP-2207-C|Deactivation of DFI burn to payback DUSD loan & activation condition of DFI->DUSD future swap|https://github.com/DeFiCh/dfips/issues/191
+CFP-2207-01|Pond, decentralize Ocean API and run it everywhere (30 000 DFI)|https://github.com/DeFiCh/dfips/issues/168
+CFP-2207-02|Development of a Wallet Monitoring System (28 000 DFI)|https://github.com/DeFiCh/dfips/issues/169
+CFP-2207-03|Improvement and maintenance of DeFiChain-Analytics (25 000 DFI)|https://github.com/DeFiCh/dfips/issues/171
+CFP-2207-04|saiive.live Infrastructure funding till end of year (6 000 DFI)|https://github.com/DeFiCh/dfips/issues/172
+CFP-2207-05|dSEA - the NFT marketplace for DeFiChain (26 300 DFI)|https://github.com/DeFiCh/dfips/issues/173
+CFP-2207-06|Cashflow Butler - cashflow for everyone without crypto assets (175 000 DFI)|https://github.com/DeFiCh/dfips/issues/174
+CFP-2207-07|DeFiChain-Cockpit - everything under control (45 000 DFI)|https://github.com/DeFiCh/dfips/issues/175
+CFP-2207-08|Telegram Moderators (41 250 DFI)|https://github.com/DeFiCh/dfips/issues/176
+CFP-2207-09|Sharing is caring - DeFiChain Wiki Updates (3 000 DFI)|https://github.com/DeFiCh/dfips/issues/177
+CFP-2207-10|Vault-maxi v2 and command center (20 000 DFI)|https://github.com/DeFiCh/dfips/issues/178
+CFP-2207-11|dSTOCKS.io - Trading wallet for synthetic assets (85 000 DFI)|https://github.com/DeFiCh/dfips/issues/179
+CFP-2207-12|APOLLO MISSION - TRADE SHOWS (132 278 DFI)|https://github.com/DeFiCh/dfips/issues/180
+CFP-2207-13|APOLLO MISSION - BRAND AWARENESS CAMPAIGN (281 250 DFI)|https://github.com/DeFiCh/dfips/issues/181
+CFP-2207-14|JELLYWALLET FINAL CFP (168 975 DFI)|https://github.com/DeFiCh/dfips/issues/182
+CFP-2207-15|DeFiChain-Wizard - Automation for mass adoption (42 000 DFI)|https://github.com/DeFiCh/dfips/issues/183
+CFP-2207-16|DeFiChain Community Explorer - An alternative explorer (20 000 DFI)|https://github.com/DeFiCh/dfips/issues/185
+CFP-2207-17|Liquidity mining reward for DFI ERC20 pairs at Uniswap (1 000 000 DFI)|https://github.com/DeFiCh/dfips/issues/186
+CFP-2207-18|Decentralize DeFiChain Ocean (8 000 DFI)|https://github.com/DeFiCh/dfips/issues/187
