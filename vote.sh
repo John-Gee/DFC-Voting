@@ -5,21 +5,21 @@ then
   source vote.conf
 fi
 
-cfps="cfps/2207.txt"
+cfps="cfps/2208.txt"
 
 if [ -z $owner ]
 then
-  owner=`/usr/bin/yad --entry --title "Owner" --text "Please input your owner address"`
+  owner=`yad --entry --title "Owner" --text "Please input your owner address"`
 fi
 
-password=`/usr/bin/yad --text-align=center --text "Please input your password" --entry --hide-text`
+password=`yad --text-align=center --text "Please input your password" --entry --hide-text`
 
 if [ ! -z $password ]
 then
   $defiPath/defi-cli -conf="$conf" walletpassphrase "$password" $timeout
   if [ 0 != $? ]
   then
-    /usr/bin/yad --error --no-wrap --text "Wallet unlocking failed!"
+    yad --error --no-wrap --text "Wallet unlocking failed!"
     exit 1
   fi
   password=""
@@ -38,15 +38,18 @@ do
     cfpURL=`echo $CFP | cut -d\| -f3`
     cleanTitle=`echo $cfpTitle | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g'`
     
-    vote=`/usr/bin/yad --title "DFC Voter" --height=200 --list \
+    vote=`yad --title "DFC Voter" --height=200 --list \
           --text "<big><a href='$cfpURL'>$cleanTitle</a></big>" \
           --column "Vote $i/$num" Yes Neutral No`
-    echo "vote: $vote"
-    if [ 0 == $? ]
+    if [ 1 == $? ]
     then
-      vote=yes
+      break
     fi
+    vote="${vote/|/}"
+    echo "$vote"
     sign=`"$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote"`
+    echo "$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote"
+    echo "$sign"
     echo "defi-cli signmessage $owner $cfpId-$vote $sign" | xclip -selection c
   fi
   ((i++))
