@@ -1,11 +1,11 @@
-23
+24
 DFIP-2208-A|payout 50% of DEX-fee to DUSD loans & introduce real negative interest rates|https://github.com/DeFiCh/dfips/issues/195
 DFIP-2208-B|Move further rewards from DUSD-DFI to USDT-DUSD / USDC-DUSD Pools|https://github.com/DeFiCh/dfips/issues/201
 DFIP-2208-C|CFP proposal fees should be in proportion to the amount requested & fee distribution to voters|https://github.com/DeFiCh/dfips/issues/211
 CFP-2208-01|Expansion to the Russian Community (40 000 DFI)|https://github.com/DeFiCh/dfips/issues/188
-CFP-2208-02|For moderation and technical improvement of the Telegram group: Crypto Steuern DACH (DFI 7860)|https://github.com/DeFiCh/dfips/issues/192
+CFP-2208-02|For moderation and technical improvement of the Telegram group: Crypto Steuern DACH (7 860 DFI)|https://github.com/DeFiCh/dfips/issues/192
 CFP-2208-03|Chain.report - Complete DeFiChain tax integration (115 000 DFI)|https://github.com/DeFiCh/dfips/issues/193
-CFP-2208-04|Animated series for the DefiChain (7000 DFI)|https://github.com/DeFiCh/dfips/issues/194
+CFP-2208-04|Animated series for the DefiChain (7 000 DFI)|https://github.com/DeFiCh/dfips/issues/194
 CFP-2208-05|Hackathon for DeFi Meta Chain (350 000 DFI)|https://github.com/DeFiCh/dfips/issues/197
 CFP-2208-06|Deepcoin.com listing (11 000 DFI)|https://github.com/DeFiCh/dfips/issues/198
 CFP-2208-07|International Staking Provider (300 000 DFI)|https://github.com/DeFiCh/dfips/issues/200
@@ -17,8 +17,9 @@ CFP-2208-12|Additional Trade Show Smartcon (27 057 DFI)|https://github.com/DeFiC
 CFP-2208-13|Learn & Earn Execution (512 658 DFI)|https://github.com/DeFiCh/dfips/issues/207
 CFP-2208-14|DeFiChain Lottery Pot (20 000 DFI)|https://github.com/DeFiCh/dfips/issues/208
 CFP-2208-15|Historic Defichain Data, A Powerful Explorer, Correct Tax Reports (no-one has them) and Public Free API for Everyone (80 000 DFI)|https://github.com/DeFiCh/dfips/issues/209
-CFP-2208-16|Economical Simulation Framework to Predict Effects of Consensus Changes on the Ecosystem (30 000 DFI|https://github.com/DeFiCh/dfips/issues/210
+CFP-2208-16|Economical Simulation Framework to Predict Effects of Consensus Changes on the Ecosystem (30 000 DFI)|https://github.com/DeFiCh/dfips/issues/210
 CFP-2208-17|DefiCFP.org - cfp-tracking website (39 000 DFI)|https://github.com/DeFiCh/dfips/issues/213
-CFP-2208-18|DFSneo - a full custody brokerage mobile application for dAssets on DeFiChain (682000 DFI)|https://github.com/DeFiCh/dfips/issues/214
+CFP-2208-18|DFSneo - a full custody brokerage mobile application for dAssets on DeFiChain (682 000 DFI)|https://github.com/DeFiCh/dfips/issues/214
 CFP-2208-19|Auto-compounder & Automated Delta Neutral Strategy to attract TVL & help repeg DUSD (75 000 DFI)|https://github.com/DeFiCh/dfips/issues/216
-CFP-2208-20|DeFiChain Captain - JellyfishSDK integration and performances improvements (5100 DFI)|https://github.com/DeFiCh/dfips/issues/217
+CFP-2208-20|DeFiChain Captain - JellyfishSDK integration and performances improvements (5 100 DFI)|https://github.com/DeFiCh/dfips/issues/217
+CFP-2208-21|Continue DFI rewards on BSC DFI-BNB pool on BSC/ACSI.finance (20 000 DFI)|https://github.com/DeFiCh/dfips/issues/215
