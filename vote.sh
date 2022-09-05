@@ -38,18 +38,26 @@ do
     cfpURL=`echo $CFP | cut -d\| -f3`
     cleanTitle=`echo $cfpTitle | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&#39;/g'`
     
-    vote=`yad --title "DFC Voter" --height=200 --list \
+    vote=$(yad --title "DFC Voter" --height=200 --list \
           --text "<big><a href='$cfpURL'>$cleanTitle</a></big>" \
-          --column "Vote $i/$num" Yes Neutral No`
+          --column "Vote $i/$num" Yes Neutral No)
     if [ 1 == $? ]
     then
       break
     fi
-    vote="${vote/|/}"
-    echo "$vote"
-    sign=`"$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote"`
-    echo "$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote"
-    echo "$sign"
+    vote="${vote,,}"
+    if [[ "$vote" == *"neutral"* ]]; then
+      vote="neutral"
+      echo "vote to neutral"
+    elif [[ "$vote" == *"yes"* ]]; then
+      vote="yes"
+      echo "vote to yes"
+    elif [[ "$vote" == *"no"* ]]; then
+      vote="no"
+      echo "vote to no"
+    fi
+    sign=$("$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote")
+    echo "defi-cli signmessage $owner $cfpId-$vote $sign"
     echo "defi-cli signmessage $owner $cfpId-$vote $sign" | xclip -selection c
   fi
   ((i++))
