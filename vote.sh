@@ -41,20 +41,23 @@ do
     vote=$(yad --title "DFC Voter" --height=200 --list \
           --text "<big><a href='$cfpURL'>$cleanTitle</a></big>" \
           --column "Vote $i/$num" Yes Neutral No)
-    if [ 1 == $? ]
+    rc=$?
+    # first for cancel, second for Esc
+    if [ 1 == $rc ] || [ 252 == $rc ]
     then
+      echo "Exiting"
       break
     fi
     vote="${vote,,}"
     if [[ "$vote" == *"neutral"* ]]; then
       vote="neutral"
-      echo "vote to neutral"
     elif [[ "$vote" == *"yes"* ]]; then
       vote="yes"
-      echo "vote to yes"
     elif [[ "$vote" == *"no"* ]]; then
       vote="no"
-      echo "vote to no"
+    else
+      echo "Incorrect result for the vote"
+      break
     fi
     sign=$("$defiPath/defi-cli" -conf="$conf" signmessage "$owner" "$cfpId-$vote")
     echo "defi-cli signmessage $owner $cfpId-$vote $sign"
